@@ -13,5 +13,5 @@
     <dubbo:registry address="nacos://60.205.230.70:8848" register="false"/>
 
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
-    <dubbo:reference id="demoService" interface="com.js.api.DemoService" check="false"/>
+    <dubbo:reference id="demoService" interface="com.js.api.DemoService" check="false" retries="0" timeout="20000"/>
 </beans>

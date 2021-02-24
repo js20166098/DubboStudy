@@ -9,6 +9,6 @@ dubbo:
   scan:
     base-packages: com.js.service
   protocol:
-    port: 20880
+    port: -1
     name: dubbo
     id: dubbo-proivider
