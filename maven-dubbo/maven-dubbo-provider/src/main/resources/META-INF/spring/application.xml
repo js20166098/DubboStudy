@@ -10,7 +10,7 @@
     <!--不需要注册到服务注册中心-->
     <!--<dubbo:registry address="zookeeper://192.168.216.128:2181" timeout="10000"/>-->
 
-    <dubbo:registry address="nacos://60.205.230.70:8848" timeout="10000"/>
+    <dubbo:registry address="nacos://60.205.230.70:8848" port="20881" timeout="10000"/>
 
     <dubbo:protocol name="dubbo" port="20880"/>
 
