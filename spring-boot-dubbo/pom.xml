@@ -15,19 +15,21 @@
     <artifactId>spring-boot-dubbo</artifactId>
     <packaging>pom</packaging>
     <name>spring-boot-dubbo</name>
-
+    <properties>
+        <dubbbo.version>3.2.1</dubbbo.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>3.0.7</version>
+            <version>${dubbbo.version}</version>
         </dependency>
 
 
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo</artifactId>
-            <version>3.0.10</version>
+            <version>${dubbbo.version}</version>
         </dependency>
 
         <dependency>
@@ -41,14 +43,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-dependencies-zookeeper</artifactId>
-            <version>3.0.10</version>
+            <version>${dubbbo.version}</version>
             <type>pom</type>
         </dependency>
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -70,7 +70,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
+                <version>3.0.6</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
