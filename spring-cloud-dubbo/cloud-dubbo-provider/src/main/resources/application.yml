@@ -3,6 +3,8 @@ spring:
   application:
     name: cloud-dubbo-provider
   cloud:
+    compatibility-verifier:
+      enabled: false
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
@@ -11,6 +13,9 @@ server:
 application:
   base-package: com.js
 dubbo:
+  application:
+    qos-port: 33333
+    qos-enable: true
   scan:
     base-packages: ${application.base-package}.service
   protocol:
@@ -19,5 +24,6 @@ dubbo:
     id: cloud-dubbo-proivider
 #  registry:
 #    address: nacos://60.205.230.70:8848
+
 
 

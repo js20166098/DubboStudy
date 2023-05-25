@@ -3,6 +3,8 @@ spring:
   application:
     name: cloud-dubbo-consumer
   cloud:
+    compatibility-verifier:
+      enabled: false
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
@@ -11,6 +13,9 @@ server:
 application:
   base-package: com.js
 dubbo:
+  application:
+    qos-port: 22222
+    qos-enable: true
   cloud:
     # 表示要订阅服务的服务名，可以配置'*'，
     # 代表订阅所有服务，不推荐使用。若需订阅多应用，使用 "," 分割

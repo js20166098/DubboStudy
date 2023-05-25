@@ -6,6 +6,9 @@ server:
   port: 8080
 
 dubbo:
+  application:
+    qos-port: 33333
+    qos-enable: true
   scan:
     base-packages: com.js.service
   protocol:
