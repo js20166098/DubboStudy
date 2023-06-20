@@ -26,7 +26,7 @@
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <dubbbo.version>3.2.1</dubbbo.version>
+        <dubbbo.version>3.2.2</dubbbo.version>
         <zk.version>3.8.1</zk.version>
         <snakeyaml.version>2.0</snakeyaml.version>
         <guava.version>31.1-jre</guava.version>
