@@ -13,6 +13,7 @@
         <module>spring-boot-dubbo</module>
         <module>maven-dubbo</module>
         <module>spring-cloud-dubbo</module>
+        <module>dubbo-trace</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
