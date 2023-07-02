@@ -17,3 +17,5 @@ dubbo:
     port: -1
     name: dubbo
 
+logging:
+  config: classpath:logback/logback-spring.xml

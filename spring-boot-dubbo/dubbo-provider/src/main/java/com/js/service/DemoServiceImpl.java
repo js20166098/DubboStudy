@@ -15,7 +15,6 @@ public class DemoServiceImpl implements DemoService {
     @Override
     public String sayHello(String name) {
         log.info("当前的端口号为{}", port);
-        log.info("当前服务被申请访问");
         return "Hello " + name;
     }
 }
