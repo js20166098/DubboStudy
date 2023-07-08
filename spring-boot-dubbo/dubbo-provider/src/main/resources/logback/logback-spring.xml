@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="10 seconds">
     <contextName>logback</contextName>
-    <property name="LOG_PATTERN" value="%d{yyy-MM-dd HH:mm:ss.SSS} [%X{X-B3-TraceId:-}] [%thread] %-5level %logger{20} - [%method,%line] - %msg%n"/>
+    <property name="LOG_PATTERN" value="%d{yyy-MM-dd HH:mm:ss.SSS} [%X{TraceId}] [%thread] %-5level %logger{20} - [%method,%line] - %msg%n"/>
     <property name="FILE_PATH" value="logs/%d{yyyy.MM.dd}/%d{yyyy.MM.dd}.%i.log"/>
 
     <property name="FILE_ERROR_PATH" value="logs/%d{yyyy.MM.dd}/error/%d{yyyy.MM.dd}.%i.error.log"/>
