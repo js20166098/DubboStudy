@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.CompletableFuture;
+
 @RestController
 public class TestController {
 
@@ -13,6 +15,10 @@ public class TestController {
 
     @GetMapping("/test")
     public String getString(){
-        return testDubbo.test();
+        CompletableFuture.supplyAsync(()->{
+            System.out.println("异步执行");
+            return testDubbo.test();
+        });
+        return "success";
     }
 }

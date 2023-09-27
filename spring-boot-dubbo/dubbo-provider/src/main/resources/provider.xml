@@ -8,7 +8,7 @@
         http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 
     <!-- 使用multicast广播注册中心暴露服务地址 -->
-    <dubbo:registry address="nacos://60.205.230.70:8848"/>
+    <dubbo:registry address="nacos://127.0.0.1:8848"/>
 
     <!-- 声明需要暴露的服务接口 -->
     <dubbo:service interface="com.js.api.DemoService" ref="demoService"/>
