@@ -15,5 +15,8 @@ dubbo:
       migration: FORCE_APPLICATION  # dubbo3.0新增配置
   scan:
     base-packages: com.js.service
+  protocol:
+    port: -1
+    name: dubbo
 logging:
   config: classpath:logback/logback-spring.xml

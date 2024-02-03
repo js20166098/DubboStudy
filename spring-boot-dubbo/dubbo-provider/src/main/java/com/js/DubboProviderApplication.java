@@ -7,7 +7,6 @@ import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
 @ImportResource("classpath:dubbo/*.xml")
-@ComponentScan(basePackages = {"com.js","com.dujie"})
 public class DubboProviderApplication {
 
     public static void main(String[] args) {
