@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class TestDubbo {
 
-    @Autowired
+    @Autowired(required = false)
     private DemoService demoService;
 
     public String test(){
