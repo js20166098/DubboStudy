@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TestDubbo {
 
-    @Autowired
+    @Autowired(required = false)
     private DemoService demoService;
 
     public String test(){
