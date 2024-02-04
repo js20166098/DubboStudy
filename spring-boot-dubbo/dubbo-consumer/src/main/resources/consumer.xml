@@ -11,6 +11,8 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder/>
 
+    <dubbo:application name="dubbo-consumer"/>
+
     <!-- 用dubbo协议在20880端口暴露服务 -->
     <dubbo:protocol name="dubbo" port="-1" />
 
