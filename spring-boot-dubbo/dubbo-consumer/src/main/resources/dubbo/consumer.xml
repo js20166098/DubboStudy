@@ -11,11 +11,17 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder/>
 
+    <dubbo:application name="dubbo-consumer"/>
+
     <!-- 用dubbo协议在20880端口暴露服务 -->
     <dubbo:protocol name="dubbo" port="-1" />
 
-    <dubbo:registry address="zookeeper://127.0.0.1:2181" register="false"/>
+    <dubbo:registry address="zookeeper://127.0.0.1:2181" register="false" id = "dubboRegister"/>
 
-    <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
-    <dubbo:reference id="demoService" interface="com.js.api.DemoService" check="false" retries="0" timeout="20000"/>
+    <dubbo:consumer registry="dubboRegister" check="false" retries="0" timeout="20000">
+        <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
+        <dubbo:reference id="demoService" interface="com.js.api.DemoService" />
+    </dubbo:consumer>
+
+
 </beans>
