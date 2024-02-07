@@ -16,7 +16,7 @@
     <packaging>pom</packaging>
     <name>spring-boot-dubbo</name>
     <properties>
-        <dubbbo.version>3.2.1</dubbbo.version>
+        <dubbbo.version>3.2.10</dubbbo.version>
     </properties>
     <dependencies>
         <dependency>

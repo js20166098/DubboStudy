@@ -9,11 +9,15 @@
        http://dubbo.apache.org/schema/dubbo/dubbo.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
-    <dubbo:registry address="nacos://127.0.0.1:8848" />
-
-    <!-- 声明需要暴露的服务接口 -->
-    <dubbo:service interface="com.js.api.ISayHelloService" ref="sayHelloService" timeout="10000" />
+    <dubbo:registry address="nacos://127.0.0.1:8848?registry-type=service" id = "nacosRegistry" />
 
     <!-- 和本地bean一样实现服务 -->
     <bean id="sayHelloService" class="com.js.service.SayHelloServiceImpl"/>
+
+    <dubbo:provider registry="nacosRegistry">
+        <!-- 声明需要暴露的服务接口 -->
+        <dubbo:service interface="com.js.api.ISayHelloService" ref="sayHelloService" timeout="10000" />
+    </dubbo:provider>
+
+
 </beans>

@@ -13,9 +13,11 @@
 
     <dubbo:application name="dubbo-server"/>
     <!--不需要注册到服务注册中心-->
-    <dubbo:registry address="nacos://127.0.0.1:8848" port="20888" timeout="20000"/>
+    <dubbo:registry address="nacos://127.0.0.1:8848" port="20888" timeout="20000" id="nacosRegistry"/>
 
-    <dubbo:reference id="loginService" interface="com.js.api.ILoginService"/>
+    <dubbo:consumer registry="nacosRegistry">
+        <dubbo:reference id="loginService" interface="com.js.api.ILoginService"/>
+    </dubbo:consumer>
 
 
 </beans>
