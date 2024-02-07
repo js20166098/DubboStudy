@@ -12,11 +12,11 @@
     <context:property-placeholder/>
     <dubbo:application name="dubbo-server"/>
     <!-- 使用multicast广播注册中心暴露服务地址 -->
-    <dubbo:registry address="zookeeper://127.0.0.1:2181?registry-type=service" port="20880" timeout="1000000" id="nacosRegistry"/>
+    <dubbo:registry address="zookeeper://127.0.0.1:2181?registry-type=service" port="20880" timeout="1000000" id="zkRegistry"/>
 
     <!-- 和本地bean一样实现服务 -->
     <bean id="loginService" class="com.js.service.LoginServiceImpl"/>
-    <dubbo:provider registry="nacosRegistry">
+    <dubbo:provider registry="zkRegistry">
         <!-- 声明需要暴露的服务接口 -->
         <dubbo:service interface="com.js.api.ILoginService" ref="loginService"/>
     </dubbo:provider>

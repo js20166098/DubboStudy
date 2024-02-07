@@ -13,7 +13,6 @@
         <module>spring-boot-dubbo</module>
         <module>maven-dubbo</module>
         <module>spring-cloud-dubbo</module>
-        <module>dubbo-trace</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -27,7 +26,7 @@
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <dubbbo.version>3.2.2</dubbbo.version>
+        <dubbbo.version>3.2.11</dubbbo.version>
         <zk.version>3.8.1</zk.version>
         <snakeyaml.version>2.0</snakeyaml.version>
         <guava.version>31.1-jre</guava.version>
@@ -85,6 +84,11 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-registry-zookeeper</artifactId>
+                <version>${dubbbo.version}</version>
             </dependency>
 
 
