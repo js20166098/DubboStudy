@@ -14,9 +14,9 @@
 
     <dubbo:registry address="zookeeper://127.0.0.1:2181?registry-type=service" id="zkRegistry"/>
 
-    <dubbo:consumer registry="zkRegistry">
+    <dubbo:consumer registry="zkRegistry" check="true">
         <!-- 生成远程服务代理，可以和本地bean一样使用 sayHelloService -->
-        <dubbo:reference id="sayHelloService" interface="com.js.api.ISayHelloService" check="false"/>
+        <dubbo:reference id="sayHelloService" interface="com.js.api.ISayHelloService"/>
     </dubbo:consumer>
 
 </beans>
