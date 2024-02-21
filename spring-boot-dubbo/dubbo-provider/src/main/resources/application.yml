@@ -6,6 +6,8 @@ server:
   port: 8080
 
 dubbo:
+  registry:
+    use-as-config-center: false
   application:
     qos-port: 33333
     qos-enable: true
