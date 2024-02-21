@@ -12,14 +12,15 @@
     <context:property-placeholder/>
 
     <!-- 使用multicast广播注册中心暴露服务地址 -->
-    <dubbo:registry address="zookeeper://127.0.0.1:2181" id="zkRegistry"/>
+    <dubbo:registry address="nacos://127.0.0.1:8848" id="nacosRegistry" group="spring-boot-dubbo"
+                    use-as-config-center="false"/>
 
     <!-- 和本地bean一样实现服务 -->
     <bean id="demoService" class="com.js.service.DemoServiceImpl"/>
 
 
 
-    <dubbo:provider registry="zkRegistry" >
+    <dubbo:provider registry="nacosRegistry" >
         <!-- 声明需要暴露的服务接口 -->
         <dubbo:service interface="com.js.api.DemoService" ref="demoService"/>
     </dubbo:provider>
