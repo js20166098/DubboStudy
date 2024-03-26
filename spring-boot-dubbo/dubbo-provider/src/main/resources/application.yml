@@ -6,13 +6,10 @@ server:
   port: 8080
 
 dubbo:
-#  application:
-#    service-discovery:
-#      migration: FORCE_APPLICATION  # dubbo3.0新增配置
-  scan:
-    base-packages: com.js.service
-  protocol:
-    port: -1
-    name: dubbo
+  application:
+    service-discovery:
+      migration: FORCE_APPLICATION  # dubbo3.0新增配置
+#  scan:
+#    base-packages: com.js.service
 logging:
   config: classpath:logback/logback-spring.xml

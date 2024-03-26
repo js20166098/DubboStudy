@@ -12,18 +12,6 @@ server:
   port: 8888
 application:
   base-package: com.js
-dubbo:
-  application:
-    qos-port: 33333
-    qos-enable: true
-  scan:
-    base-packages: ${application.base-package}.service
-  protocol:
-    port: -1
-    name: dubbo
-    id: cloud-dubbo-proivider
-#  registry:
-#    address: nacos://60.205.230.70:8848
 
 
 
