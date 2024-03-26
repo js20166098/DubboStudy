@@ -4,7 +4,8 @@ spring:
     name: dubbo-consumer
 server:
   port: 8081
-
+project:
+  name: ${spring.application.name}
 dubbo:
   application:
     service-discovery:
