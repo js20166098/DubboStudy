@@ -9,10 +9,11 @@
        http://dubbo.apache.org/schema/dubbo/dubbo.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
-    <dubbo:registry address="nacos://127.0.0.1:8848?registry-type=service" id = "nacosRegistry" group="cloud-dubbo-provider"
-                    use-as-metadata-center="false" use-as-config-center="false" protocol="dubbo" register-mode="instance" />
 
-    <dubbo:protocol name="dubbo" port="-1" id = "cloud-dubbo-proivider" />
+    <dubbo:protocol name="dubbo" port="-1" id = "cloud-dubbo-proivider"  />
+
+    <dubbo:registry address="nacos://127.0.0.1:8848?registry-type=service" id = "nacosRegistry" group="spring-cloud-dubbo"
+                    use-as-metadata-center="false" use-as-config-center="false" register-mode="instance" />
 
     <dubbo:application name="cloud-dubbo-provider" qos-port="33333" qos-enable="true" protocol="dubbo"/>
 

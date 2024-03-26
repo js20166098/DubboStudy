@@ -17,3 +17,5 @@ dubbo:
   application:
     service-discovery:
       migration: FORCE_APPLICATION  # dubbo3.0新增配置
+  cloud:
+    subscribed-services: cloud-dubbo-provider
