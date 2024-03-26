@@ -7,10 +7,6 @@ server:
 
 dubbo:
 #  application:
-#    qos-port: 33333
-#    qos-enable: true
-#    name: dubbo-provider # dubbo应用名
-#    register-mode: instance # 服务注册模式：dubbo3.0新增配置
 #    service-discovery:
 #      migration: FORCE_APPLICATION  # dubbo3.0新增配置
   scan:

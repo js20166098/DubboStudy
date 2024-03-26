@@ -6,24 +6,11 @@ server:
   port: 8081
 
 dubbo:
-#  registry:
-#    use-as-metadata-center: false
   application:
-#    qos-port: 22222
-#    qos-enable: true
-#    name: dubbo-consumer # dubbo应用名
-#    register-mode: instance # 服务注册模式：dubbo3.0新增配置
     service-discovery:
       migration: FORCE_APPLICATION  # dubbo3.0新增配置
   scan:
     base-packages: com.js.service
-#  cloud:
-#    # 表示要订阅服务的服务名，可以配置'*'，
-#    # 代表订阅所有服务，不推荐使用。若需订阅多应用，使用 "," 分割
-#    subscribed-services: dubbo-provider
-  protocol:
-    port: -1
-    name: dubbo
 
 logging:
   config: classpath:logback/logback-spring.xml
