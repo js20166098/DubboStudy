@@ -11,12 +11,12 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder/>
 
-<!--    <dubbo:application name="dubbo-consumer"/>-->
-
     <!-- 用dubbo协议在20880端口暴露服务 -->
-    <dubbo:protocol name="dubbo" port="-1" />
+    <dubbo:protocol name="dubbo" port="-1"/>
 
-    <dubbo:registry address="nacos://127.0.0.1:8848" register="false" id = "nacosRegister" group="spring-boot-dubbo" use-as-config-center="false"/>
+    <dubbo:registry address="nacos://127.0.0.1:8848" register="false" id = "nacosRegister" group="spring-boot-dubbo"
+                    use-as-metadata-center="false" use-as-config-center="false" protocol="dubbo"/>
+    <dubbo:application name="dubbo-consumer" qos-port="33333" qos-enable="true" register-mode="instance" register-consumer="false"/>
 
     <dubbo:consumer registry="nacosRegister" check="false" retries="0" timeout="20000">
         <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
