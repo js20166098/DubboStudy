@@ -12,6 +12,11 @@ server:
   port: 8888
 application:
   base-package: com.js
+dubbo:
+  scan:
+    base-packages: ${application.base-package}.service
+#  registry:
+#    address: nacos://60.205.230.70:8848
 
 
 
