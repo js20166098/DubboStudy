@@ -9,16 +9,9 @@ dubbo:
   registry:
     use-as-config-center: false
   application:
-    qos-port: 33333
-    qos-enable: true
-    name: dubbo-provider # dubbo应用名
-    register-mode: instance # 服务注册模式：dubbo3.0新增配置
     service-discovery:
       migration: FORCE_APPLICATION  # dubbo3.0新增配置
-  scan:
-    base-packages: com.js.service
-  protocol:
-    port: -1
-    name: dubbo
+#  scan:
+#    base-packages: com.js.service
 logging:
   config: classpath:logback/logback-spring.xml

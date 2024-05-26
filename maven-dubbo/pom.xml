@@ -16,9 +16,6 @@
     <artifactId>maven-dubbo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>maven-dubbo</name>
-    <properties>
-        <dubbbo.version>3.2.10</dubbbo.version>
-    </properties>
 
     <dependencies>
         <dependency>

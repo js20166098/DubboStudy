@@ -15,9 +15,6 @@
     </modules>
     <artifactId>spring-boot-dubbo</artifactId>
     <name>spring-boot-dubbo</name>
-    <properties>
-        <dubbbo.version>3.2.10</dubbbo.version>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -32,7 +29,6 @@
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo</artifactId>
-            <version>${dubbbo.version}</version>
         </dependency>
 
         <dependency>
