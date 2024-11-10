@@ -1,7 +1,6 @@
 package com.js;
 
 import com.js.api.ILoginService;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
