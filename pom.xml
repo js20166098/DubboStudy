@@ -17,7 +17,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.0</version>
+        <version>3.3.5</version>
     </parent>
 
     <name>DubboStudy</name>
@@ -26,10 +26,11 @@
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <dubbbo.version>3.2.11</dubbbo.version>
+        <dubbbo.version>3.2.16</dubbbo.version>
         <zk.version>3.9.1</zk.version>
         <snakeyaml.version>2.0</snakeyaml.version>
         <guava.version>32.0.0-android</guava.version>
+        <dubbbo_zk.version>3.2.16</dubbbo_zk.version>
 
     </properties>
 
@@ -68,7 +69,7 @@
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo-dependencies-zookeeper</artifactId>
-                <version>${dubbbo.version}</version>
+                <version>${dubbbo_zk.version}</version>
                 <type>pom</type>
             </dependency>
             <dependency>
